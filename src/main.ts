@@ -1,4 +1,11 @@
-import { Greeter } from './greeter';
+// depending on the order of these two imports the comingFrom message change
+import 'date-extension';
+import {sayHello} from 'hwrld-date';
 
-const g = new Greeter('Juri');
-g.greet();
+
+console.log(`calling from main app`);
+let date: Date = new Date();
+console.log(`hello ${date.toLocaleString()} ${date.comingFrom()}`);
+
+console.log(`calling say hello from library`);
+sayHello();
