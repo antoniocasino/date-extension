@@ -1,3 +1,10 @@
+This repo extends the following Webpack starter.
+Its only aim is to demonstrate that extending a global object in an application can affect external libraries method definition.
+To demonstrate it I created a library that extends Date global object.
+Extending the same method inside an app that use that library result in a conflict where the last invoked(imported) of the two wins.
+
+
+
 Webpack 4 + TypeScript starter
 ------------------------------
 
